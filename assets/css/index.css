@@ -1,27 +1,30 @@
+/*---Header---*/
 header {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   background-color: grey;
 }
-
 nav ul {
   display: flex;
   flex-direction: row;
 }
-
 .sinPunto {
   list-style-type: none;
 }
-
 nav {
   width: 33%;
 }
+.nav-link{
+  color: rgb(138, 70, 68);
 
+}
+.nav-link:hover{
+  color:white
+}
 header div {
   width: 33%;
 }
-
 #centro {
   display: flex;
   align-self: center;
@@ -31,14 +34,12 @@ header div {
   /* Elimina el relleno por defecto de la lista */
   list-style: none;
 }
-
 #derecha {
-  padding-left: 10px;
+  padding-left: 3%;
   justify-content: end;
   padding: 0;
   padding-top: 10px;
 }
-
 #centro li {
   /* flex: 1;
             list-style: none;
@@ -48,12 +49,10 @@ header div {
   text-decoration-color: rgb(138, 70, 68);;
   /* Alinea el texto al centro */
 }
-
 #derecha li {
   align-items: center;
   padding-right: 8%;
   text-decoration-color: rgb(138, 70, 68);;
-
 }
 
 /* Override UGG site */
@@ -70,16 +69,6 @@ header div {
   display: none;
 }
 
-/* Helpers */
-/**************************/
-.margin-top-10 {
-  padding-top: 10px;
-}
-
-.margin-bot-10 {
-  padding-bottom: 10px;
-}
-
 /* Typografía */
 /**************************/
 #sections h1 {
@@ -92,7 +81,7 @@ header div {
   margin: 0;
 }
 
-#sections h2 {
+.seccion-one h2, .seccion-two h2 , .seccion-three h2{
   font-family: "Oswald", sans-serif;
   font-size: 70px;
   letter-spacing: 10px;
@@ -101,6 +90,8 @@ header div {
   text-transform: uppercase;
   z-index: 10;
   opacity: 0.9;
+  -webkit-text-stroke: 3px #8a4644;
+  color: rgb(255, 255, 255);;
 }
 
 #sections h3 {
@@ -120,7 +111,7 @@ header div {
   line-height: 24px;
 }
 
-.first-character {
+.titulo-parrafo {
   font-weight: 400;
   float: left;
   font-size: 84px;
@@ -129,25 +120,6 @@ header div {
   padding-right: 8px;
   padding-left: 3px;
   font-family: "Source Sans Pro", sans-serif;
-}
-
-.sc .ny .atw{
-  color: #5c1917;
-  -webkit-text-stroke: 2px black;
-}
-
-/* Section - Title */
-/**************************/
-#sections .title {
-  background: rgb(209, 208, 208);
-  padding: 60px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#sections .title h1 {
-  font-size: 35px;
-  letter-spacing: 8px;
 }
 
 /* Section - Block */
@@ -163,20 +135,38 @@ header div {
   background: rgb(183, 182, 182);
   padding: 60px;
 }
-
-#sections .section-overlay-mask {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.7;
+/* Carreras - Grid */
+.carreras {
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  place-items: center;
+  list-style: none;
+  grid-gap: 1rem;
+  padding: 1rem;
 }
 
+.carreras_item {
+  padding: 1rem;
+  background-image: url("https://www.clubrunning.es/cartel/VI-Urban-Trail-Nocturno-Universitario-Ciudad-de-Leon-2023.jpg");
+  background-color: #737373;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+}
+.carreras_item a{
+  text-decoration: none;
+  color: #26272b;
+}
+.footer_carrera{
+  text-align: left;
+  
+}
+.footer_carrera a{
+  font-size:x-small;
+}
 /* Section - Parallax */
 /**************************/
-#sections .parallax-one {
+#sections .seccion-one {
   padding-top: 200px;
   padding-bottom: 200px;
   overflow: hidden;
@@ -191,7 +181,7 @@ header div {
   background-position: top center;
 }
 
-#sections .parallax-two {
+#sections .seccion-two {
   padding-top: 200px;
   padding-bottom: 200px;
   overflow: hidden;
@@ -206,7 +196,7 @@ header div {
   background-position: center center;
 }
 
-#sections .parallax-three {
+#sections .seccion-three {
   padding-top: 200px;
   padding-bottom: 200px;
   overflow: hidden;
@@ -221,9 +211,7 @@ header div {
   background-position: center center;
 }
 
-#sections .parallax-one h2 {
-  color: rgb(255, 255, 255);
-}
+
 
 /* Extras */
 /**************************/
@@ -234,8 +222,7 @@ header div {
 }
 
 /* Media Queries */
-/**************************/
-@media screen and (max-width: 959px) and (min-width: 768px) {
+/* @media screen and (max-width: 959px) and (min-width: 768px) {
   #sections .block {
     padding: 40px;
     width: 620px;
@@ -256,9 +243,9 @@ header div {
     padding: 30px;
   }
 
-  #sections .parallax-one,
-  #sections .parallax-two,
-  #sections .parallax-three {
+  #sections .seccion-one,
+  #sections .seccion-two,
+  #sections .seccion-three {
     padding-top: 100px;
     padding-bottom: 100px;
   }
@@ -270,7 +257,10 @@ header div {
     width: 290px;
     background-color: grey;
   }
-}
+} */
+
+
+
 
 #selectProvincia {
   display: flex;
@@ -281,32 +271,22 @@ header div {
   text-align: center;
   font-size: medium;
 }
-h2{
-  -webkit-text-stroke: 3px #8a4644;
-  color: rgb(255, 255, 255);;
-}
-i {
+
+.titulo-parrafo i {
   -webkit-text-stroke: 3px rgb(138, 70, 68);
   color: rgb(255, 255, 255);;
-}
+} 
 
-.nav-link{
-  color: rgb(138, 70, 68);
-
-}
-.nav-link:hover{
-  color:white
-}
-
-p{
+.pBlock{
   text-align: center;
   padding-top: 60px;
 
 }
+/* ---Footer--- */
 .site-footer
 {
   background-color:#26272b;
-  padding:45px 0 20px;
+  padding:10px ;
   font-size:15px;
   line-height:24px;
   color:#737373;
@@ -314,60 +294,17 @@ p{
 .site-footer hr
 {
   border-top-color:#bbb;
-  opacity:0.5
-}
-.site-footer hr.small
-{
-  margin:20px 0
 }
 .site-footer h6
 {
   color:#fff;
   font-size:16px;
-  text-transform:uppercase;
   margin-top:5px;
-  letter-spacing:2px
+  letter-spacing:3px
 }
-.site-footer a
-{
-  color:#737373;
-}
-.footer-links
-{
-  padding-left:0;
-  list-style:none
-}
-.footer-links li
-{
-  display:block
-}
-.footer-links a
-{
-  color:#737373
-}
-.footer-links.inline li
-{
-  display:inline-block
-}
-.site-footer .social-icons
-{
-  text-align:right
-}
-.site-footer .social-icons a
-{
-  width:40px;
-  height:40px;
-  line-height:40px;
-  margin-left:6px;
-  margin-right:0;
-  border-radius:100%;
-  background-color:#33353d
-}
-.copyright-text
-{
-  margin:0
-}
-@media (max-width:991px)
+
+/* Footer Media Queries */
+/* @media (max-width:991px)
 {
   .site-footer [class^=col-]
   {
@@ -384,48 +321,7 @@ p{
   {
     text-align:center
   }
-}
-.social-icons
-{
-  padding-left:0;
-  margin-bottom:0;
-  list-style:none
-}
-.social-icons li
-{
-  display:inline-block;
-  margin-bottom:4px
-}
-.social-icons li.title
-{
-  margin-right:15px;
-  text-transform:uppercase;
-  color:#96a2b2;
-  font-weight:700;
-  font-size:13px
-}
-.social-icons a{
-  background-color:#eceeef;
-  color:#818a91;
-  font-size:16px;
-  display:inline-block;
-  line-height:44px;
-  width:44px;
-  height:44px;
-  text-align:center;
-  margin-right:8px;
-  border-radius:100%;
-  -webkit-transition:all .2s linear;
-  -o-transition:all .2s linear;
-  transition:all .2s linear
-}
-.social-icons.size-sm a
-{
-  line-height:34px;
-  height:34px;
-  width:34px;
-  font-size:14px
-}
+} 
 @media (max-width:767px)
 {
   .social-icons li.title
@@ -435,3 +331,4 @@ p{
     font-weight:600
   }
 }
+*/
