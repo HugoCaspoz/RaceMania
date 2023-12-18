@@ -1,59 +1,4 @@
-/*---Header---*/
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: grey;
-}
-nav ul {
-  display: flex;
-  flex-direction: row;
-}
-.sinPunto {
-  list-style-type: none;
-}
-nav {
-  width: 33%;
-}
-.nav-link{
-  color: rgb(138, 70, 68);
 
-}
-.nav-link:hover{
-  color:white
-}
-header div {
-  width: 33%;
-}
-#centro {
-  display: flex;
-  align-self: center;
-  justify-content: space-evenly;
-  padding: 0;
-  padding-top: 10px;
-  /* Elimina el relleno por defecto de la lista */
-  list-style: none;
-}
-#derecha {
-  padding-left: 3%;
-  justify-content: end;
-  padding: 0;
-  padding-top: 10px;
-}
-#centro li {
-  /* flex: 1;
-            list-style: none;
-            text-align: center; */
-  text-align: center;
-  text-decoration: underline;
-  text-decoration-color: rgb(138, 70, 68);;
-  /* Alinea el texto al centro */
-}
-#derecha li {
-  align-items: center;
-  padding-right: 8%;
-  text-decoration-color: rgb(138, 70, 68);;
-}
 
 /* Override UGG site */
 #main {
@@ -135,6 +80,26 @@ header div {
   background: rgb(183, 182, 182);
   padding: 60px;
 }
+
+#busqueda{
+  text-align: center;
+  width: 33%;
+}
+#btn-Buscar, #busqueda, #comunidades, #provincias {
+  border-radius: 5px;
+  
+
+}
+#btn-Buscar{
+  width: 25%;
+  background-color: #75211e;
+  color: #fff;
+  transition: background-color 0.3s ease  ;
+}
+#btn-Buscar:hover{
+  background-color: #fff;
+  color:#75211e;
+}
 /* Carreras - Grid */
 .carreras {
   grid-template-columns: repeat(3, 1fr);
@@ -164,6 +129,18 @@ header div {
 .footer_carrera a{
   font-size:x-small;
 }
+
+
+.carreras_tipos{
+  background-color: #737373;
+  height: 250px;
+  width: 250px;
+  border-radius: 25px;
+}
+.carreras_tipos a{
+ text-decoration: none;
+ color: #26272b;
+}
 /* Section - Parallax */
 /**************************/
 #sections .seccion-one {
@@ -179,6 +156,7 @@ header div {
   -webkit-background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  text-align: center;
 }
 
 #sections .seccion-two {
@@ -262,14 +240,11 @@ header div {
 
 
 
-#selectProvincia {
-  display: flex;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.seccion-one #comunidades, .seccion-one #provincias {
   width: 33%;
   text-align: center;
   font-size: medium;
+  justify-content: center;
 }
 
 .titulo-parrafo i {

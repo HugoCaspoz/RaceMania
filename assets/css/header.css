@@ -1,0 +1,56 @@
+/*---Header---*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: grey;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .sinPunto {
+    list-style-type: none;
+  }
+  nav {
+    width: 33%;
+  }
+  .nav-link{
+    color: rgb(138, 70, 68);
+  
+  }
+  .nav-link:hover{
+    color:white
+  }
+  header div {
+    width: 33%;
+  }
+  #centro {
+    display: flex;
+    align-self: center;
+    justify-content: space-evenly;
+    padding: 0;
+    padding-top: 10px;
+    /* Elimina el relleno por defecto de la lista */
+    list-style: none;
+  }
+  #derecha {
+    padding-left: 3%;
+    justify-content: end;
+    padding: 0;
+    padding-top: 10px;
+  }
+  #centro li {
+    /* flex: 1;
+              list-style: none;
+              text-align: center; */
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(138, 70, 68);;
+    /* Alinea el texto al centro */
+  }
+  #derecha li {
+    align-items: center;
+    padding-right: 8%;
+    text-decoration-color: rgb(138, 70, 68);;
+  }

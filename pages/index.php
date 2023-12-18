@@ -6,101 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/index.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/index.css" rel="stylesheet">
 </head>
 
 <body>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <header>
-
-        <div class="" href="#">
-            <img src="/assets/img/1logo_transparent.png" width="100" height="40">
-        </div>
-
-
-        <nav>
-            <ul class="sinPunto" id="centro">
-                <li>
-                    <a class="nav-link" href="#">Carreras</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">Ciudades</a>
-                </li>
-            </ul>
-        </nav>
-
-        <nav>
-            <ul class="sinPunto" id="derecha">
-                <li>
-                    <a class="nav-link" href="#">Iniciar Sesión</a>
-                </li>
-                <li>
-                    <a class="nav-link" href="#">Registro</a>
-                </li>
-            </ul>
-        </nav>
-
-    </header>
+    <?php
+    include("header.php");
+    ?>
     <div id="sections">
         <section>
             <div class="seccion-one">
-                <h2>Busca una carrera </h2>
-                <select required name="provincia" class="form-control" id="selectProvincia">
-                    <option value="">Elige Provincia</option>
-                    <option value="Álava/Araba">Álava</option>
-                    <option value="Albacete">Albacete</option>
-                    <option value="Alicante">Alicante</option>
-                    <option value="Almería">Almería</option>
-                    <option value="Asturias">Asturias</option>
-                    <option value="Ávila">Ávila</option>
-                    <option value="Badajoz">Badajoz</option>
-                    <option value="Baleares">Baleares</option>
-                    <option value="Barcelona">Barcelona</option>
-                    <option value="Burgos">Burgos</option>
-                    <option value="Cáceres">Cáceres</option>
-                    <option value="Cádiz">Cádiz</option>
-                    <option value="Cantabria">Cantabria</option>
-                    <option value="Castellón">Castellón</option>
-                    <option value="Ceuta">Ceuta</option>
-                    <option value="Ciudad Real">Ciudad Real</option>
-                    <option value="Córdoba">Córdoba</option>
-                    <option value="Cuenca">Cuenca</option>
-                    <option value="Gerona/Girona">Girona</option>
-                    <option value="Granada">Granada</option>
-                    <option value="Guadalajara">Guadalajara</option>
-                    <option value="Guipúzcoa/Gipuzkoa">Guipúzcoa</option>
-                    <option value="Huelva">Huelva</option>
-                    <option value="Huesca">Huesca</option>
-                    <option value="Jaén">Jaén</option>
-                    <option value="La Coruña/A Coruña">A Coruña</option>
-                    <option value="La Rioja">La Rioja</option>
-                    <option value="Las Palmas">Las Palmas</option>
-                    <option value="León">León</option>
-                    <option value="Lérida/Lleida">Lleida</option>
-                    <option value="Lugo">Lugo</option>
-                    <option value="Madrid">Madrid</option>
-                    <option value="Málaga">Málaga</option>
-                    <option value="Melilla">Melilla</option>
-                    <option value="Murcia">Murcia</option>
-                    <option value="Navarra">Navarra</option>
-                    <option value="Orense/Ourense">Ourense</option>
-                    <option value="Palencia">Palencia</option>
-                    <option value="Pontevedra">Pontevedra</option>
-                    <option value="Salamanca">Salamanca</option>
-                    <option value="Segovia">Segovia</option>
-                    <option value="Sevilla">Sevilla</option>
-                    <option value="Soria">Soria</option>
-                    <option value="Tarragona">Tarragona</option>
-                    <option value="Tenerife">Tenerife</option>
-                    <option value="Teruel">Teruel</option>
-                    <option value="Toledo">Toledo</option>
-                    <option value="Valencia">Valencia</option>
-                    <option value="Valladolid">Valladolid</option>
-                    <option value="Vizcaya/Bizkaia">Vizcaya</option>
-                    <option value="Zamora">Zamora</option>
-                    <option value="Zaragoza">Zaragoza</option>
-                </select>
+                <form action="" method="get">
+                    <h2>Busca una carrera </h2>
+                    <input type="text" id="busqueda" name="busqueda" placeholder="Buscar..."><br>
+                    <select id="comunidades">
+                    </select>
+
+                    <select id="provincias">
+                    </select><br><br>
+                    <input type="submit" value="Buscar" id="btn-Buscar">
+                </form>
             </div>
         </section>
 
@@ -140,7 +67,7 @@
                                 <i class="bi bi-geo-alt"></i>
                                 <a id="lugar-carrera">León</a>
                             </div>
-                            
+
                         </div>
                     </li>
                     <li class="carreras_item">
@@ -150,7 +77,7 @@
                                 <i class="bi bi-calendar3"></i>
                                 <a>07-12-2023</a>
                             </div>
-                            
+
                         </div>
                     </li>
                     <li class="carreras_item">
@@ -178,7 +105,7 @@
                             <div class="footer_carrera">
                                 <i class="bi bi-calendar3"></i>
                                 <a>07-12-2023</a>
-                            </div>                           
+                            </div>
                         </div>
                     </li>
                     <li class="carreras_item">
@@ -197,36 +124,48 @@
         <section>
             <div class="seccion-three">
                 <h2>Tipos de Carreras</h2>
+
             </div>
         </section>
 
         <section>
             <div class="block">
-                
+                <ul class="carreras">
+                    <li class="carreras_tipos">
+                        <h2 class="titulo_carrera"><a href="#">Cross Country</a></h2>
+                    </li>
+                    <li class="carreras_tipos">
+                        <h2 class="titulo_carrera"><a href="#">Carreras urbanas</a></h2>
+                    </li>
+                    <li class="carreras_tipos">
+                        <h2 class="titulo_carrera"><a href="#">Carreras de montaña</a></h2>
+                    </li>
+                </ul>
             </div>
         </section>
 
     </div>
     <footer class="site-footer">
         <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <h6>ABOUT US</h6>
-              <p class="text-justify">Racemania es una página web creada por Hugo Casado un estudiantes de DAW en el IES San Andrés, la página está creada con HTML, JS y PHP, junto con la implementación de Bootstrap.</p>
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>ABOUT US</h6>
+                    <p class="text-justify">Racemania es una página web creada por Hugo Casado un estudiantes de DAW en el IES San Andrés, la página está creada con HTML, JS y PHP, junto con la implementación de Bootstrap.</p>
+                </div>
             </div>
-          </div>
-          <hr>
+            <hr>
         </div>
         <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Hugo Casado
-              </p>
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by Hugo Casado
+                    </p>
+                </div>
             </div>
-          </div>
         </div>
     </footer>
-    
+    <script src="../assets/js/comunidades.data.js"></script>
+    <script src="../assets/js/index.js"></script>
 </body>
 
 </html>

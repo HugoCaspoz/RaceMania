@@ -1,0 +1,11 @@
+#user, #pass{
+    width: 50%;
+}
+    
+.logo img {
+    height: 40px;
+    margin: 20px;
+}
+body{
+    background-color: grey;
+}
