@@ -2,11 +2,6 @@ body{
     background-color: grey;
 }
 
-.logo img {
-    height: 40px;
-    margin: 20px;
-}
-
-#fullname, #user, #email, #pass, #pass2, #weight, #birthday, #height, #activities {
+#fullname, #username, #email, #pass, #pass2, #weight, #birthday, #height, #activities {
     width: 70%;   
 }

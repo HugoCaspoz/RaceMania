@@ -1,11 +1,31 @@
-#user, #pass{
-    width: 50%;
-}
-    
-.logo img {
-    height: 40px;
-    margin: 20px;
-}
 body{
     background-color: grey;
+    align-items: center;
+}
+#inicio{
+    display:flex;
+    justify-content: center;
+}
+#divLogin{
+    background-color:  rgb(183, 182, 182);
+    width: 60%;
+    height: 50vh;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 10%;
+    
+    
+}
+#formulario{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#user, #pass{
+    width: 70%;
+}
+#botones{
+    margin-bottom: 5%;
 }

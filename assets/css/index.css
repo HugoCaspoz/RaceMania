@@ -112,19 +112,22 @@
 
 .carreras_item {
   padding: 1rem;
-  background-image: url("https://www.clubrunning.es/cartel/VI-Urban-Trail-Nocturno-Universitario-Ciudad-de-Leon-2023.jpg");
-  background-color: #737373;
   height: 100px;
   width: 200px;
   text-align: center;
+  background-image: radial-gradient(rgba(197, 194, 194, 0.582),rgba(255, 255, 255, 0)), url("../img/carrera_cross_country.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .carreras_item a{
   text-decoration: none;
-  color: #26272b;
+  color: #000000;
 }
 .footer_carrera{
   text-align: left;
-  
+  color: #000000;
+
 }
 .footer_carrera a{
   font-size:x-small;
@@ -138,9 +141,41 @@
   border-radius: 25px;
 }
 .carreras_tipos a{
- text-decoration: none;
- color: #26272b;
+  text-decoration: none;
+  -webkit-text-stroke: 1px #8a4644;
+   color: rgb(255, 255, 255);;
+ }
+#CrossCountry{
+  /* background-image: url("../img/carrera_cross_country.jpg"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: radial-gradient(rgba(197, 194, 194, 0.582),rgba(255, 255, 255, 0)), url("../img/carrera_cross_country.jpg");
+
 }
+#CarreraUrbana{
+  background-image: radial-gradient(rgba(197, 194, 194, 0.582),rgba(255, 255, 255, 0)), url("../img/carrera_urbana.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#CarreraMontaña{
+  background-image: radial-gradient(rgba(197, 194, 194, 0.582),rgba(255, 255, 255, 0)), url("../img/carrera_de_montaña.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.titulo_carrera{
+text-align: center;
+}
+.titulo_tipo_carrera{
+  margin-top: 35%;
+  text-align: center;
+  
+  }
+
 /* Section - Parallax */
 /**************************/
 #sections .seccion-one {

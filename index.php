@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/index.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/index.css" rel="stylesheet">
 </head>
 
 <body>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <?php
-    include("header.php");
+    include("pages/indexHeader.php");
     ?>
     <div id="sections">
         <section>
@@ -76,6 +76,8 @@
                             <div class="footer_carrera">
                                 <i class="bi bi-calendar3"></i>
                                 <a>07-12-2023</a>
+                                <i class="bi bi-geo-alt"></i>
+                                <a id="lugar-carrera">León</a>
                             </div>
 
                         </div>
@@ -86,6 +88,8 @@
                             <div class="footer_carrera">
                                 <i class="bi bi-calendar3"></i>
                                 <a>07-12-2023</a>
+                                <i class="bi bi-geo-alt"></i>
+                                <a id="lugar-carrera">León</a>
                             </div>
                         </div>
                     </li>
@@ -96,6 +100,8 @@
                             <div class="footer_carrera">
                                 <i class="bi bi-calendar3"></i>
                                 <a>07-12-2023</a>
+                                <i class="bi bi-geo-alt"></i>
+                                <a id="lugar-carrera">León</a>
                             </div>
                         </div>
                     </li>
@@ -105,6 +111,8 @@
                             <div class="footer_carrera">
                                 <i class="bi bi-calendar3"></i>
                                 <a>07-12-2023</a>
+                                <i class="bi bi-geo-alt"></i>
+                                <a id="lugar-carrera">León</a>
                             </div>
                         </div>
                     </li>
@@ -114,6 +122,8 @@
                             <div class="footer_carrera">
                                 <i class="bi bi-calendar3"></i>
                                 <a>07-12-2023</a>
+                                <i class="bi bi-geo-alt"></i>
+                                <a id="lugar-carrera">León</a>
                             </div>
                         </div>
                     </li>
@@ -131,14 +141,14 @@
         <section>
             <div class="block">
                 <ul class="carreras">
-                    <li class="carreras_tipos">
-                        <h2 class="titulo_carrera"><a href="#">Cross Country</a></h2>
+                    <li class="carreras_tipos" id="CrossCountry">
+                        <h2 class="titulo_tipo_carrera"><a href="#">Cross Country</a></h2>
                     </li>
-                    <li class="carreras_tipos">
-                        <h2 class="titulo_carrera"><a href="#">Carreras urbanas</a></h2>
+                    <li class="carreras_tipos" id="CarreraUrbana">
+                        <h2 class="titulo_tipo_carrera"><a href="#">Carreras urbanas</a></h2>
                     </li>
-                    <li class="carreras_tipos">
-                        <h2 class="titulo_carrera"><a href="#">Carreras de montaña</a></h2>
+                    <li class="carreras_tipos" id="CarreraMontaña">
+                        <h2 class="titulo_tipo_carrera"><a href="#">Carreras de montaña</a></h2>
                     </li>
                 </ul>
             </div>
@@ -164,8 +174,8 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/comunidades.data.js"></script>
-    <script src="../assets/js/index.js"></script>
+    <script src="assets/js/comunidades.data.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 
 </html>

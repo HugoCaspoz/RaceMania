@@ -14,11 +14,8 @@
     <?php
         include ("header.php");
     ?>
-    <div class="logo me-auto">
-      <a href="../index.php"><img src="../assets/img/greenlife.png" alt="" class="img-fluid"></a>
-    </div>
-    <center>
-    </br></br></br></br></br>
+    <div id="inicio">
+    <div id='divLogin'>
     <h3 class="card-title">Iniciar Sesión</h3> 
     </br>                  
     <form action="../index.php" method="post" id='formulario'>                  
@@ -27,11 +24,13 @@
         </br>
         <label for="pass" class="">Contraseña: </label>
         <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña"/>
-        </br>        
+        </br>  
+        <div id="botones">    
         <input type="submit" class="btn btn-success" value="Iniciar Sesión" id="iniciar-sesion" name="iniciar-sesion" />
         <input type="reset" class="btn btn-danger"  value="Cancelar" id="cancelar" name="cancelar" />
+        </div>  
     </form>
-    </center>
-    <script src="assets/js/index.js"></script>
+    </div>
+    </div>
 </body>
 </html>
