@@ -2,6 +2,6 @@ body{
     background-color: grey;
 }
 
-#fullname, #username, #email, #pass, #pass2, #weight, #birthday, #height, #activities {
+#fullname, #username, #email, #pass, #pass2, #weight, #birthday, #height, #activities, p {
     width: 70%;   
 }

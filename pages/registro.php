@@ -29,12 +29,21 @@
                     </br>
                     <label for="email" class="form-label">Correo Electrónico: </label>
                     <input type="text" class="form-control" id="email" name="email" placeholder="Correo electrónico" />
+                    <div id='errorMail'></div>
                     </br>
                     <label for="pass" class="form-label">Contraseña: </label>
                     <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" />
+                    <div id='errorPass'></div>
                     </br>
                     <label for="pass2" class="form-label">Repite la Contraseña: </label>
                     <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Repite la Contraseña" />
+                    <div id='errorconfPass'></div>
+                    </br>
+                    <label for="phone" class="form-label">Teléfono: </label>
+                    <input type="number" class="form-control" id="phone" name="weight" placeholder="Teléfono" min="30" max="200" />
+                    </br>
+                    <label for="city" class="form-label">Ciudad: </label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="Ciudad" />
                     </br>
                     <label for="weight" class="form-label">Peso: </label>
                     <input type="number" class="form-control" id="weight" name="weight" placeholder="Peso" min="30" max="200" />
@@ -42,7 +51,10 @@
                     <label for="birthday" class="form-label">Fecha de Nacimiento: </label>
                     <input type="date" class="form-control" id="birthday" name="birthday" placeholder="Fecha de Nacimiento" />
                     </br>
-                    <label for="birthday" class="form-label">Rol del Usuario: </label></br>
+                    <label for="club" class="form-label">Club: </label>
+                    <input type="text" class="form-control" id="club" name="club" placeholder="Ciudad" />
+                    </br>
+                    <label for="rol" class="form-label">Rol del Usuario: </label></br>
                     <label for="rol" class="form-label" id=rol>
                         <input type="radio" name="opciones" id="usuario">
                         Usuario

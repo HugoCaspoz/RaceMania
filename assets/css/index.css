@@ -119,6 +119,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 10%;
 }
 .carreras_item a{
   text-decoration: none;
