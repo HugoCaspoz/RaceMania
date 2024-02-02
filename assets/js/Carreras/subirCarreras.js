@@ -1,6 +1,5 @@
 let inputGpx = document.getElementById("gpx");
 let form = document.getElementById('gpxForm');
-console.log(form);
 inputGpx.addEventListener("change", calcularSlope);
 
 function calcularSlope(){
@@ -25,9 +24,25 @@ function calcularSlope(){
             form.elements.desnivelNeg.value = values.neg.toFixed(2);
             form.elements.desnivelPos.value = values.pos.toFixed(2);
             form.elements.desnivel.value = (values.pos + values.neg).toFixed(2);
+
+            let coordenadas = [];
+
+            // Obtener todas las coordenadas del archivo GPX
+            let trkpts = xmlDoc.querySelectorAll('trkpt');
+            let intervalo=trkpts.length/200;
+            intervalo=parseInt(intervalo)
+            console.log(intervalo);
+            for (let i=1;i<trkpts.length; i+=intervalo){
+                var latitud = parseFloat(trkpts[i].getAttribute('lat'));
+                var longitud = parseFloat(trkpts[i].getAttribute('lon'));
+                coordenadas.push({ latitud, longitud });
+            }
+            
+            console.log(coordenadas);
         }
     }
 }
+
 let comunidades = document.getElementById("comunidades");
  arr.forEach(item => {
     comunidades.innerHTML+=`<option id="${item.comunidad} "value="${item.comunidad}">${item.comunidad}</option>`;
