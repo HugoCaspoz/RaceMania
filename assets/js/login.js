@@ -1,6 +1,5 @@
 let username = document.getElementById('username');
 let pass = document.getElementById('pass');
-
 // let login = document.getElementById('iniciar-sesion')
 //                         .addEventListener('click', login)
 
@@ -21,15 +20,16 @@ pass.onblur = function(){
         errorPass.innerHTML='';
     }
 }
+
 document.getElementById('prueba')
         .addEventListener('click', login)
 function login(){
     let logUser={
-        username : username.value.trim(),
-        pass : pass.value.trim(),
+        'user' : username.value.trim(),
+        'pass' : pass.value.trim()
     }
     console.log(logUser);
-    let url='http://localhost:3500/api/auth/login';
+    let url='http://localhost/RaceMania/pages/Api/loginApi.php';
     const options = {
         method: 'POST',
         headers:{
@@ -40,13 +40,20 @@ function login(){
       fetch(url, options)
         .then(res => {
             if (res.status==200){
-                
-                return res.json();             
+                console.log(res);
+                return res.json()    
+                .then(data => {
+                    console.log(data);
+                    localStorage.setItem('token', data.token);        
+                    localStorage.setItem('user', data.user);        
+                    localStorage.setItem('rol', data.rol);
+                    alert ('Login correcto');    
+                    location.href="../../index.php";
+                })         
             }
-            
+            if(res.status==401){
+                alert('Credenciales no válidas');
+            }
         })
-        .then(data => {
-            console.log(data);
-            localStorage.setItem('token', data.token);        
-    })
-}
+               
+    }

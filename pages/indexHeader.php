@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link href="assets/css/header.css" rel="stylesheet" type="text/css" >
 
 </head>
@@ -22,23 +23,24 @@
         <nav>
             <ul class="sinPunto" id="centro">
                 <li>
-                    <a class="nav-link" href="#">Carreras</a>
+                    <a class="nav-link" href="pages/carreras.php">Carreras</a>
                 </li>
             </ul>
         </nav>
 
         <nav>
             <ul class="sinPunto" id="derecha">
-                <li>
+                <!-- <li>
                     <a class="nav-link" href="pages/login.php">Iniciar Sesión</a>
                 </li>
                 <li>
                     <a class="nav-link" href="pages/registro.php">Registro</a>
-                </li>
+                </li> -->
             </ul>
         </nav>
 
     </header>
+    <script src="assets/js/indexheader.js"></script>
 </body>
 
 </html>
