@@ -38,33 +38,7 @@
     include('header.php');
     ?>
 
-    <h1>Búsqueda de Carreras</h1>
-    <a href="/RaceMania/pages/subirCarrera.php">
-        <button>Subir Carrera</button>
-    </a>
-    <form action="#" method="get">
-        <label for="barraBusqueda">Barra de Búsqueda:</label>
-        <input type="text" id="barraBusqueda" name="barraBusqueda"> 
-
-        <label for="genero">Género:</label>
-        
-
-        <label for="distancia">Distancia:</label>
-        <select id="distancia" name="distancia">
-            <option value="5">menos de 10 km</option>
-            <option value="10">menos de 10 km</option>
-            <option value="15">menos de 15 km</option>
-            <option value="20">menos de 20 km</option>
-            <option value="25">más de 25 km</option>
-        </select>
-
-        <label for="desnivel">Desnivel:</label>
-        <input type="text" id="desnivel" name="desnivel">
-
-        
-
-        <input type="submit" value="Buscar">
-    </form>
+    <h1>Carreras Favoritas</h1>
 
     <div id="resultados">
         <!-- Carreras se mostrarán aquí -->
@@ -75,12 +49,6 @@
         <div class="carrera">Carrera 5</div> -->
         <!-- Más carreras según la búsqueda -->
     </div>
-
-    <div id="pages">
-        <span id="prev">🢀</span>
-        <span id="numPag"></span>
-        <span id="next">🢂</span>
-    </div>
-    <script src="../assets/js/Carreras/carreras.js"></script>
+    <script src="../assets/js/mostrarFavoritos.js"></script>
 </body>
 </html>

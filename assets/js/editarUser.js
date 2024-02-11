@@ -8,32 +8,6 @@ let nuevoclub=document.getElementById('nuevoclub')
 let nuevorol=document.getElementById('nuevorol')
 let usuario
 if (localStorage.getItem('user')){
-        
-    function eliminar(e){
-        e.preventDefault();
-        
-        let url=`http://localhost/RaceMania/pages/Api/eliminarUsuario.php?user=${localStorage.getItem('user')}`;
-        const options = {
-            method: 'DELETE',
-            headers:{
-                'Content-Type': 'application/json'
-            }
-          };
-          fetch(url, options)
-            .then(res => {
-                if (res.status==201){             
-                        localStorage.removeItem('token');        
-                        localStorage.removeItem('user');        
-                        localStorage.removeItem('rol');   
-                        alert('Usuario eliminado')     
-                        location.href="../index.php";                       
-                }
-                if(res.status==401){
-                    alert('Credenciales no válidas');
-                }
-            })
-                   
-        }
 
         function mostrardatos(){
             let url=`http://localhost/RaceMania/pages/Api/recogerDatosUser.php?user=${localStorage.getItem('user')}`;
@@ -57,9 +31,6 @@ if (localStorage.getItem('user')){
                             nuevoemail.value=data.email
                             nuevoclub.value=data.club
                             nuevorol.value=data.rol
-                            
-                            document.getElementById('pruebaEliminar')
-                                    .addEventListener('click', eliminar); 
 
                             document.getElementById('pruebaEditar')
                                     .addEventListener('click', editar); 
@@ -121,7 +92,3 @@ if (localStorage.getItem('user')){
     location.href="../pages/login.php";
 
 }
-
-
-
-//

@@ -3,7 +3,7 @@ if (localStorage.getItem('token')) {
     derecha.innerHTML = '';
     derecha.innerHTML=`
     <li>
-    <a href="editar.php"><i class="bi bi-person"></i></a>
+    <a href="perfil.php"><i class="bi bi-person"></i></a>
     </li>
     
     <li>

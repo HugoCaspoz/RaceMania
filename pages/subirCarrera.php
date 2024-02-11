@@ -56,10 +56,23 @@
         <input type="radio" id="adulto" name="categoria" value="adulto">
         <label for="adulto">Adulto (18 años en adelante)</label>
 
+        <h3>Tipo de Carrera:</h3>
+        <input type="radio" id="cross" name="tipo" value="cross">
+        <label for="cross">Cross Country</label>
+
+        <input type="radio" id="urbano" name="tipo" value="urbano">
+        <label for="urbano">Carrera urbana</label>
+
+        <input type="radio" id="montaña" name="tipo" value="montaña">
+        <label for="montaña">Carrera de montaña</label>
+
         <h3>Comunidad Autónoma:</h3>
-        <select id="comunidades">
-        </select>
+        <select id="comunidades"></select>
+        </br></br>
+        <input type="submit" class="btn btn-success" value="Subir carrera" id="subir" name="subir" />
     </form>
+    <button id='prueba'>Prueba</button>
+
     <script src="../assets/js/Carreras/toGeoJSON.js"></script>
     <script src="../assets/js/comunidades.data.js"></script>
     <script src="../assets/js/Carreras/subirCarreras.js"></script>

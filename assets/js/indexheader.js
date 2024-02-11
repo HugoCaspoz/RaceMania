@@ -2,7 +2,7 @@ if (localStorage.getItem('token')) {
     let derecha = document.getElementById('derecha');
     derecha.innerHTML = '';
     derecha.innerHTML=`<li>
-    <a href="pages/editar.php"><i class="bi bi-person"></i></a>
+    <a href="pages/perfil.php"><i class="bi bi-person"></i></a>
     </li>
     <li>
     <button id='logout'>Cerrar Sesión</button>
