@@ -43,7 +43,13 @@
         <button>Subir Carrera</button>
     </a>
 
-    <input type="text" id="categoriaInput" placeholder="Ingrese la categoría">
+    <label for="categoriaInput">Seleccione la categoría:</label>
+    <select id="categoriaInput">
+        <option value="">-- Todas las categorías --</option>
+        <option value="infantil">Infantil (0-12 años)</option>
+        <option value="juvenil">Juvenil (13-17 años)</option>
+        <option value="adulto">Adulto (18 años en adelante)</option>
+    </select>
     <input type="text" id="nombreInput" placeholder="Ingrese el nombre">
     <button id="filtrar" >Filtrar</button>
 
