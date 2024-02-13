@@ -42,6 +42,11 @@
     <a href="/RaceMania/pages/subirCarrera.php">
         <button>Subir Carrera</button>
     </a>
+
+    <input type="text" id="categoriaInput" placeholder="Ingrese la categoría">
+    <input type="text" id="nombreInput" placeholder="Ingrese el nombre">
+    <button id="filtrar" >Filtrar</button>
+
     <form action="#" method="get">
         <label for="barraBusqueda">Barra de Búsqueda:</label>
         <input type="text" id="barraBusqueda" name="barraBusqueda"> 

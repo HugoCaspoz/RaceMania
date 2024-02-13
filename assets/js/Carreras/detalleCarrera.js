@@ -39,7 +39,7 @@ fetch(url, options)
                     <li><strong>Comunidad:</strong> ${data.comunidad} </li>
                     <li><strong>Desnivel Negativo:</strong> ${data.desNeg} m</li>
                     <li><strong>Desnivel Positivo:</strong> ${data.desPos} m</li>
-                    <li><a href='/pages/editarCarrera.php?id=${id}'>Editar Carrera</a></li>
+                    <li><a href='/RaceMania/pages/editarCarrera.php?id=${id}'>Editar Carrera</a></li>
                     </ul>`
 
                 })

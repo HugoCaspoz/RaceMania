@@ -14,28 +14,31 @@ function verCarreras() {
         .then(res => {
             if (res.status == 200) {
                 return res.json()
-                    .then(data => {
-                        function filtrarCarreras() {
-                            // Obtener el valor seleccionado en el elemento select
-                            let distanciaSeleccionada = parseInt(document.getElementById("distancia").value);
-                        
-                            // Filtrar las carreras según la distancia seleccionada
-                            const carrerasFiltradas = carreras.filter(carrera => carrera.distancia === distanciaSeleccionada);
-                        
-                            // Mostrar los resultados en el div "resultados"
-                            mostrarResultados(carrerasFiltradas);
-                        } 
-                        
-                    imprimirResultados(data)
-                    })
+                    
             }
             if (res.status == 400) {
                 alert('Credenciales no válidas');
             }
+        }).then(data => {
+        
+        const categoriaInput = document.getElementById("categoriaInput").value;
+        const nombreInput = document.getElementById("nombreInput").value;
+        // Filtra los elementos según la categoría y el nombre ingresados atraves de un filter conbinado
+        let resultadosFiltrados = [];
+        data.forEach(elemento => {
+            if ((categoriaInput === "" || elemento.categoria === categoriaInput) &&
+                (nombreInput === "" || elemento.nombre.includes(nombreInput))) {
+                resultadosFiltrados.push(elemento);
+            }
+        });
+        imprimirResultados(resultadosFiltrados)
         })
 }
+let filtrar = document.getElementById('filtrar')
+                        .addEventListener( "click", verCarreras);
 verCarreras()
 function imprimirResultados(data){
+    resultados.innerHTML= "";
     pagsTotales = Math.trunc(data.length / 6)
                         data.filter((_,index)=> Math.trunc(index/6)==currentPage)
                             .forEach(carrera => {
@@ -55,6 +58,25 @@ function imprimirResultados(data){
 
                         numPag.innerHTML = `${currentPage} de ${pagsTotales}`
 }
+// function filtrar(data) {
+//     // Obtiene los valores de los inputs
+//     const categoriaInput = document.getElementById("categoriaInput").value;
+//     const nombreInput = document.getElementById("nombreInput").value;
+//     // Filtra los elementos según la categoría y el nombre ingresados atraves de un filter conbinado
+//     const resultadosFiltrados = [];
+//     data.forEach(elemento => {
+//         if ((categoriaInput === "" || elemento.categoria === categoriaInput) &&
+//             (nombreInput === "" || elemento.nombre.includes(nombreInput))) {
+//             resultadosFiltrados.push(elemento);
+//         }
+//     });
+
+//     // Resultado
+//     console.log(resultadosFiltrados);
+//     return resultadosFiltrados;
+
+// }
+
 //Paginacion
 let next = document.getElementById("next")
 next.addEventListener("click", () => {

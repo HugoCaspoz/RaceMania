@@ -48,7 +48,7 @@ function login(){
                     localStorage.setItem('user', data.user);        
                     localStorage.setItem('rol', data.rol);
                     alert ('Login correcto');    
-                    location.href="../../index.php";
+                    location.href="./../index.php";
                 })         
             }
             if(res.status==401){

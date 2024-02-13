@@ -1,8 +1,7 @@
 <?php
 require_once('./conexion.php');
-$json =  json_decode(file_get_contents("php://input"), true);
 $con = new Conexion();
-    if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
+    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
         $id = $_GET['id'];
@@ -13,23 +12,6 @@ $con = new Conexion();
             $carrera = $resultado->fetch_assoc();
             $carreraJSON=json_encode($carrera);
             echo $carreraJSON;
-            $editUser = $alumno['user'];
-                
-            $nuevofullname = $json['nuevofullname'];
-            $nuevouser = $json['nuevouser'];
-            $nuevoemail = $json['nuevoemail'];
-            $nuevapass = password_hash($json['nuevapass'], PASSWORD_BCRYPT);
-            $nuevophone = $json['nuevophone'];
-            $nuevocity = $json['nuevocity'];
-            $nuevoclub = $json['nuevoclub'];
-            $nuevorol = $json['nuevorol'];
-
-            $updateSql = "UPDATE usuarios SET fullname = '$nuevofullname' , user = '$nuevouser'  ,  email= '$nuevoemail'  ,  pass= '$nuevapass'  , phone = '$nuevophone'  ,  city = '$nuevocity'  ,  club= '$nuevoclub' , rol='$nuevorol' WHERE user = '$editUser'";
-                if ($con->query($updateSql) === TRUE) {
-                    header("HTTP/1.1 200 Update user succesfully");
-                } else {
-                    header('HTTP/1.1 400 Update Error');
-                }
             }else{
                 header('HTTP/1.1 401 Usuario no encontrado');
             }
@@ -37,4 +19,67 @@ $con = new Conexion();
             header('HTTP/1.1 401 Not Found');
         }
         exit;
+}
+if($_SERVER["REQUEST_METHOD"]==="PUT"){
+    $json =  json_decode(file_get_contents("php://input"), true);
+
+    $id = $_GET['id'];
+
+    $nombre = $json['nombre'];
+    $distancia = $json['distancia'];
+    $genero = $json['genero'];
+    $categoria = $json['categoria'];
+    $comunidad = $json['comunidad'];
+    $desNeg = $json['desNeg'];
+    $desPos = $json['desPos'];
+    $desTotal = $json['desTotal'];
+    $coors = $json['coors'];
+    $updateSql = "UPDATE `carreras` SET ";
+
+    if (!empty($nombre)) {
+        $updateSql .= "nombre = '$nombre', ";
+    }
+    
+    if (!empty($distancia)) {
+        $updateSql .= "distancia = '$distancia', ";
+    }
+    
+    if (!empty($genero)) {
+        $updateSql .= "genero = '$genero', ";
+    }
+    if (!empty($comunidad)) {
+        $updateSql .= "comunidad = '$comunidad', ";
+    }
+    
+    if (!empty($desNeg)) {
+        $updateSql .= "desNeg = '$desNeg', ";
+    }
+    
+    if (!empty($desPos)) {
+        $updateSql .= "desPos = '$desPos', ";
+    }
+    
+    if (!empty($desTotal)) {
+        $updateSql .= "desTotal = '$desTotal', ";
+    }
+    
+    if (!empty($coors)) {
+        $updateSql .= "coors = '$coors', ";
+    }
+
+    $updateSql = rtrim($updateSql, ', ');
+    $updateSql .= " WHERE id='$id'";
+    echo $updateSql;
+    try{
+        $resultado=$con->query($updateSql);
+        if ($resultado) {
+            header("HTTP/1.1 200 Update carrera succesfully");
+        } else {
+            header('HTTP/1.1 400 Update Error: ' .$con->error);
+            echo $updateSql;
+        }
+    }catch (mysqli_sql_exception $e){
+        header('HTTP/1.1 400 Update Error');
+    }
+
 }

@@ -69,8 +69,6 @@ function registrarse() {
         'club': club.value.trim() || 'Desconocido',
         'rol': rol || 'user'
     }
-    console.log(nuevoUser);
-
     let url = 'http://localhost/RaceMania/pages/Api/existeUser.php';
     const options = {
         method: 'POST',
@@ -81,7 +79,6 @@ function registrarse() {
     };
     fetch(url, options)
         .then(res => {
-            console.log(res)
             if (res.status == 200) {
                 let url = 'http://localhost/RaceMania/pages/Api/registroApi.php';
                 const options = {
@@ -93,14 +90,12 @@ function registrarse() {
                 };
                 fetch(url, options)
                     .then(res => {
-                        console.log(res)
                         if (res.status == 200) {
                             return res.json();
                             
                         }
                     })
                     .then(data => {
-                        console.log(data);
                         alert ('Usuario registrado correctamente');
                         location.href='./login.php';
                     })

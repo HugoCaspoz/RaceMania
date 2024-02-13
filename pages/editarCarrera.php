@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Carrera</title>
     <!-- Agrega enlaces a tus archivos CSS o cualquier otra configuración que necesites -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <style>
         #map {
             height: 180px;
@@ -106,37 +105,8 @@
 <body>
     <header>
         <h1 id="detalleCarrera"></h1>
-        <h2>Añadir a favoritos:</h2>
-        <div class="heart-container" title="Like">
-            <input type="checkbox" class="checkbox" id="añadirFavorito">
-            <div class="svg-container">
-                <svg viewBox="0 0 24 24" class="svg-outline" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Zm-3.585,18.4a2.973,2.973,0,0,1-3.83,0C4.947,16.006,2,11.87,2,8.967a4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,11,8.967a1,1,0,0,0,2,0,4.8,4.8,0,0,1,4.5-5.05A4.8,4.8,0,0,1,22,8.967C22,11.87,19.053,16.006,13.915,20.313Z">
-                    </path>
-                </svg>
-                <svg viewBox="0 0 24 24" class="svg-filled" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17.5,1.917a6.4,6.4,0,0,0-5.5,3.3,6.4,6.4,0,0,0-5.5-3.3A6.8,6.8,0,0,0,0,8.967c0,4.547,4.786,9.513,8.8,12.88a4.974,4.974,0,0,0,6.4,0C19.214,18.48,24,13.514,24,8.967A6.8,6.8,0,0,0,17.5,1.917Z">
-                    </path>
-                </svg>
-                <svg class="svg-celebrate" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
-                    <polygon points="10,10 20,20"></polygon>
-                    <polygon points="10,50 20,50"></polygon>
-                    <polygon points="20,80 30,70"></polygon>
-                    <polygon points="90,10 80,20"></polygon>
-                    <polygon points="90,50 80,50"></polygon>
-                    <polygon points="80,80 70,70"></polygon>
-                </svg>
-            </div>
-        </div>
+        
     </header>
-
-    <center>
-        <section id="mapa">
-            <!-- Aquí puedes integrar tu mapa, ya sea con una API de mapas como Google Maps u otra solución -->
-            <div id="map"></div>
-        </section>
-    </center>
-
     <div id="informacion-carrera">
         <!-- <h2>Información de la Carrera</h2>
         <ul>
@@ -146,12 +116,71 @@
            
         </ul> -->
     </div>
+    <h1>GPX Analyzer</h1>
+
+    <form id="gpxForm">
+        <label for="gpx">Selecciona un archivo GPX:</label>
+        <input type="file" id="gpx" accept=".gpx" />
+    <h2>Resultados:</h2>
+
+    <label for="desnivelNeg">Desnivel Negativo:</label>
+    <input type="text" id="desnivelNeg" readonly />
+
+    <label for="desnivelPos">Desnivel Positivo:</label>
+    <input type="text" id="desnivelPos" readonly />
+    </br></br>
+    <label for="desnivel">Desnivel Total:</label>
+    <input type="text" id="desnivel" readonly />
+
+
+    <label for="distancia">Distancia Total de la Carrera :</label>
+    <input type="number" id="distancia" placeholder="Km"/>
+
+    <label for="nombre">Nombre de la Carrera:</label>
+    <input type="text" id="nombre"/>
+
+    <h3>Género:</h3>
+        <input type="radio" id="hombre" name="genero" value="hombre">
+        <label for="hombre">Hombre</label>
+
+        <input type="radio" id="mujer" name="genero" value="mujer">
+        <label for="mujer">Mujer</label>
+
+        <input type="radio" id="mixto" name="genero" value="mixto">
+        <label for="mixto">Mixto</label>
+
+        <h3>Categoría de Participación:</h3>
+        <input type="radio" id="infantil" name="categoria" value="infantil">
+        <label for="infantil">Infantil (0-12 años)</label>
+
+        <input type="radio" id="juvenil" name="categoria" value="juvenil">
+        <label for="juvenil">Juvenil (13-17 años)</label>
+
+        <input type="radio" id="adulto" name="categoria" value="adulto">
+        <label for="adulto">Adulto (18 años en adelante)</label>
+
+        <h3>Tipo de Carrera:</h3>
+        <input type="radio" id="cross" name="tipo" value="cross">
+        <label for="cross">Cross Country</label>
+
+        <input type="radio" id="urbano" name="tipo" value="urbano">
+        <label for="urbano">Carrera urbana</label>
+
+        <input type="radio" id="montaña" name="tipo" value="montaña">
+        <label for="montaña">Carrera de montaña</label>
+
+        <h3>Comunidad Autónoma:</h3>
+        <select id="comunidades"></select>
+        </br></br>
+    </form>
+    <button id='prueba'>Editar</button>
+    
 
     <!-- Agrega enlaces a tus archivos JavaScript o cualquier otra configuración que necesites -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-    <script src="../assets/js/Carreras/detalleCarrera.js"></script>
-    <script src="../assets/js/Carreras/favoritos.js"></script>
+    <script src="../assets/js/Carreras/toGeoJSON.js"></script>
+    <script src="../assets/js/comunidades.data.js"></script>
+    <script src="../assets/js/Carreras/editarCarrera.js"></script>
+    
 
 </body>
 
