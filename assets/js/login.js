@@ -1,3 +1,6 @@
+if (!(localStorage.getItem('user'))){
+
+
 let username = document.getElementById('username');
 let pass = document.getElementById('pass');
 // let login = document.getElementById('iniciar-sesion')
@@ -20,7 +23,11 @@ pass.onblur = function(){
         errorPass.innerHTML='';
     }
 }
-
+document.getElementById('verContra')
+.addEventListener('click', function (e) {
+    e.preventDefault();
+    pass.type = pass.type === "password" ? "text" : "password";
+ })
 document.getElementById('prueba')
         .addEventListener('click', login)
 function login(){
@@ -42,18 +49,30 @@ function login(){
             if (res.status==200){
                 console.log(res);
                 return res.json()    
-                .then(data => {
-                    console.log(data);
-                    localStorage.setItem('token', data.token);        
-                    localStorage.setItem('user', data.user);        
-                    localStorage.setItem('rol', data.rol);
-                    alert ('Login correcto');    
-                    location.href="./../index.php";
-                })         
+                      
             }
             if(res.status==401){
                 alert('Credenciales no válidas');
             }
+            
         })
+        .then(data => {
+            console.log(data);
+            localStorage.setItem('token', data.token);        
+            localStorage.setItem('user', data.user);        
+            localStorage.setItem('rol', data.rol);
+            const currentDate = new Date();
+            localStorage.setItem('tokenStartTime', currentDate.getTime());
+            alert ('Login correcto');    
+            location.href="./../index.php";
+        })
+        .catch (error=>{
+            alert('Error en la carga de datos')
+
+        })   
                
     }
+}else{
+    alert ('Usuario ya logueado')
+    location.href='http://localhost/RaceMania/index.php';
+}

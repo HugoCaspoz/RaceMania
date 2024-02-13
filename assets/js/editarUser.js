@@ -23,25 +23,28 @@ if (localStorage.getItem('user')){
                     console.log(res);
                     if (res.status==200){
                         return res.json()    
-                        .then(data => {
-                            nuevofullname.value=data.fullname
-                            nuevouser.value=data.user
-                            nuevophone.value=data.phone
-                            nuevocity.value=data.city
-                            nuevoemail.value=data.email
-                            nuevoclub.value=data.club
-                            nuevorol.value=data.rol
-
-                            document.getElementById('pruebaEditar')
-                                    .addEventListener('click', editar); 
-
-                                  
-                        })         
                     }
                     if(res.status==401){
                         alert('Credenciales no válidas');
                     }
                 })
+                .then(data => {
+                    nuevofullname.value=data.fullname
+                    nuevouser.value=data.user
+                    nuevophone.value=data.phone
+                    nuevocity.value=data.city
+                    nuevoemail.value=data.email
+                    nuevoclub.value=data.club
+                    nuevorol.value=data.rol
+
+                    document.getElementById('pruebaEditar')
+                            .addEventListener('click', editar); 
+
+                          
+                }).catch (error=>{
+                    alert('Error en la carga de datos')
+        
+                })           
             }
             mostrardatos();
             function editar(){

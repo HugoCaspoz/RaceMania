@@ -18,16 +18,9 @@
     <div id="sections">
         <section>
             <div class="seccion-one">
-                <form action="" method="get">
                     <h2>Busca una carrera </h2>
-                    <input type="text" id="busqueda" name="busqueda" placeholder="Buscar..."><br>
-                    <select id="comunidades">
-                    </select>
-
-                    <select id="provincias">
-                    </select><br><br>
-                    <input type="submit" value="Buscar" id="btn-Buscar">
-                </form>
+                    
+                    <button id="btn-Buscar" type="button" onclick="window.location.href='./pages/carreras.php'">Buscar</button>
             </div>
         </section>
 
@@ -49,110 +42,9 @@
             </div>
         </section>
 
-        <section>
-            <div class="seccion-two">
-                <h2>Próximas Carreras</h2>
-            </div>
-        </section>
+        
 
-        <section>
-            <div class="block">
-                <ul class="carreras">
-                    <li class="carreras_item">
-                        <div class="carrera">
-                            <h2 class="titulo_carrera"><a href="#">Carrera 1</a></h2>
-                            <div class="footer_carrera">
-                                <i class="bi bi-calendar3"></i>
-                                <a id="fecha-carrera">07-12-2023</a>
-                                <i class="bi bi-geo-alt"></i>
-                                <a id="lugar-carrera">León</a>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li class="carreras_item">
-                        <div class="carrera">
-                            <h2 class="titulo_carrera"><a href="#">Carrera 2</a></h2>
-                            <div class="footer_carrera">
-                                <i class="bi bi-calendar3"></i>
-                                <a>07-12-2023</a>
-                                <i class="bi bi-geo-alt"></i>
-                                <a id="lugar-carrera">León</a>
-                            </div>
-
-                        </div>
-                    </li>
-                    <li class="carreras_item">
-                        <div class="carrera">
-                            <h2 class="titulo_carrera"><a href="#">Carrera 3</a></h2>
-                            <div class="footer_carrera">
-                                <i class="bi bi-calendar3"></i>
-                                <a>07-12-2023</a>
-                                <i class="bi bi-geo-alt"></i>
-                                <a id="lugar-carrera">León</a>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="carreras_item">
-                        <div class="carrera">
-                            <h2 class="titulo_carrera"><a href="#">Carrera 4</a></h2>
-                            <div class="footer_carrera">
-                                <i class="bi bi-calendar3"></i>
-                                <a>07-12-2023</a>
-                                <i class="bi bi-geo-alt"></i>
-                                <a id="lugar-carrera">León</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carreras_item">
-                        <div class="carrera">
-                            <h2 class="titulo_carrera"><a href="#">Carrera 5</a></h2>
-                            <div class="footer_carrera">
-                                <i class="bi bi-calendar3"></i>
-                                <a>07-12-2023</a>
-                                <i class="bi bi-geo-alt"></i>
-                                <a id="lugar-carrera">León</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carreras_item">
-                        <div class="carrera">
-                            <h2 class="titulo_carrera"><a href="#">Carrera 6</a></h2>
-                            <div class="footer_carrera">
-                                <i class="bi bi-calendar3"></i>
-                                <a>07-12-2023</a>
-                                <i class="bi bi-geo-alt"></i>
-                                <a id="lugar-carrera">León</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div class="seccion-three">
-                <h2>Tipos de Carreras</h2>
-
-            </div>
-        </section>
-
-        <section>
-            <div class="block">
-                <ul class="carreras">
-                    <li class="carreras_tipos" id="CrossCountry">
-                        <h2 class="titulo_tipo_carrera"><a href="#">Cross Country</a></h2>
-                    </li>
-                    <li class="carreras_tipos" id="CarreraUrbana">
-                        <h2 class="titulo_tipo_carrera"><a href="#">Carreras urbanas</a></h2>
-                    </li>
-                    <li class="carreras_tipos" id="CarreraMontaña">
-                        <h2 class="titulo_tipo_carrera"><a href="#">Carreras de montaña</a></h2>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        
 
     </div>
     <footer class="site-footer">
@@ -174,8 +66,7 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/comunidades.data.js"></script>
-    <script src="assets/js/index.js"></script>
 </body>
+<script src="./assets/js/session.js"></script>
 
 </html>

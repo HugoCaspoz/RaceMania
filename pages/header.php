@@ -22,7 +22,7 @@
         <nav>
             <ul class="sinPunto" id="centro">
                 <li>
-                    <a class="nav-link" href="#">Carreras</a>
+                    <a class="nav-link" href="./carreras.php">Carreras</a>
                 </li>
             </ul>
         </nav>
@@ -40,5 +40,6 @@
 
     </header>
     <script src="../assets/js/header.js"></script>
+
 </body>
 </html>

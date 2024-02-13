@@ -180,7 +180,8 @@
     <script src="../assets/js/Carreras/toGeoJSON.js"></script>
     <script src="../assets/js/comunidades.data.js"></script>
     <script src="../assets/js/Carreras/editarCarrera.js"></script>
-    
+    <script src="../assets/js/session.js"></script>
+
 
 </body>
 

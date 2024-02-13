@@ -29,18 +29,22 @@
                     </br>
                     <label for="pass" class="">Contraseña: </label>
                     <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" />
+                    <button id='verContra'>Ver Contraseña</button>
                     <div id='errorPass'></div>
                     </br>
                     <div id="botones">
-                        <input type="submit" class="btn btn-success" value="Iniciar Sesión" id="iniciar-sesion" name="iniciar-sesion" required/>
+
                         <input type="reset" class="btn btn-danger" value="Cancelar" id="cancelar" name="cancelar" />
                     </div>
                 </form>
-                <button id='prueba'>Prueba</button>
+                <button id='prueba' class="btn btn-success">Login</button>
+
             </div>
         </div>
     </main>
     <script src='../assets/js/login.js'></script>
+    <script src="../assets/js/session.js"></script>
+
 </body>
 
 </html>

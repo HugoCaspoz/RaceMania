@@ -1,3 +1,4 @@
+if (localStorage.getItem('rol')==='organizer'){
 let inputGpx = document.getElementById("gpx");
 let form = document.getElementById('gpxForm');
 inputGpx.addEventListener("change", calcularSlope);
@@ -119,9 +120,16 @@ function subirCarrera(){
                     .then(data => {
                         alert ('Carrera subida correctamente');
                         location.href='./carreras.php';
-                    })
+                    }).catch (error=>{
+                        alert('Error en la carga de datos')
+            
+                    })  
             
         }   
+}
+}else{
+    alert('Solo pueden entrar organizadores')
+    location.href='http://localhost/RaceMania/index.php'
 }
     
     

@@ -13,7 +13,7 @@ $json =  json_decode(file_get_contents("php://input"), true);
         $phone = $json['phone'];
         //$sql = "SELECT * FROM actores WHERE nombre LIKE '%$busqueda%' OR apellidos LIKE '%$busqueda%'";
 
-        $sql .= "(user = '$user') OR (email = '$email') OR (phone = '$phone')";
+        $sql .= "(user = '$user') OR (email = '$email')";
         try {
             $resultado = $con->query($sql);
             if ($resultado->num_rows==0){

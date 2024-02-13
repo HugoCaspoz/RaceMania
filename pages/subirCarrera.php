@@ -69,13 +69,14 @@
         <h3>Comunidad Autónoma:</h3>
         <select id="comunidades"></select>
         </br></br>
-        <input type="submit" class="btn btn-success" value="Subir carrera" id="subir" name="subir" />
     </form>
-    <button id='prueba'>Prueba</button>
+    <button id='prueba' class="btn btn-success">Subir Carrera</button>
 
     <script src="../assets/js/Carreras/toGeoJSON.js"></script>
     <script src="../assets/js/comunidades.data.js"></script>
     <script src="../assets/js/Carreras/subirCarreras.js"></script>
+    <script src="../assets/js/session.js"></script>
+
 </body>
 
 </html>

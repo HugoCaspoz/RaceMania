@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Búsqueda de Carreras</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -30,6 +33,9 @@
         }
         .pagination {
             text-align: center;
+        }
+        #map { 
+            height: 180px; 
         }
     </style>
 </head>
@@ -75,7 +81,7 @@
 
     <input type="text" id="nombreInput" placeholder="Ingrese el nombre">
     <button id="filtrar" >Filtrar</button>
-
+    <div id="map"></div>
     <div id="resultados">
         <!-- Carreras se mostrarán aquí -->
         <!-- <div class="carrera">Carrera 1</div>
@@ -91,6 +97,11 @@
         <span id="numPag"></span>
         <span id="next">🢂</span>
     </div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
     <script src="../assets/js/Carreras/carreras.js"></script>
+    <script src="../assets/js/session.js"></script>
+
 </body>
 </html>

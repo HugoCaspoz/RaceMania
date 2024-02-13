@@ -50,5 +50,7 @@
         <!-- Más carreras según la búsqueda -->
     </div>
     <script src="../assets/js/mostrarFavoritos.js"></script>
+    <script src="../assets/js/session.js"></script>
+
 </body>
 </html>

@@ -55,11 +55,10 @@
                         <input type="radio" name="opciones" id="organizador">
                         Organizador
                     </label> </br></br>
-                    <input type="submit" class="btn btn-success" value="Guardar" id="guardar" name="guardar" />
                     <input type="reset" class="btn btn-danger" value="Cancelar" id="cancelar" name="cancelar" />
                     </br></br>
                 </form>
-                <button id='pruebaEditar'>PruebaEditar</button>
+                <button class="btn btn-success" id='pruebaEditar'>Editar</button>
                 <button id='pruebaEliminar'>PruebaEliminar</button>
 
 
@@ -67,6 +66,8 @@
         </div>
     </center>
     <script src='../assets/js/editarUser.js'></script>
+    <script src="../assets/js/session.js"></script>
+
 </body>
 
 </html>

@@ -1,7 +1,14 @@
+
 let resultados = document.getElementById('resultados');
 let currentPage = 0;
 let itemsPerPage = 6;
 let pagsTotales
+
+let map = L.map('map').setView([44, -9,85416],6)
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 function verCarreras() {
     let url = 'http://localhost/RaceMania/pages/Api/todasCarreras.php';
     const options = {
@@ -32,8 +39,13 @@ function verCarreras() {
                 resultadosFiltrados.push(elemento);
             }
         });
+        mapaCarreras(resultadosFiltrados)
         imprimirResultados(resultadosFiltrados)
         })
+        .catch (error=>{
+            alert('Error en la carga de datos')
+
+        })  
 }
 let filtrar = document.getElementById('filtrar')
                         .addEventListener( "click", verCarreras);
@@ -53,31 +65,29 @@ function imprimirResultados(data){
                             </div>
                         </div>`
                         });
-
+                        if (resultados.innerHTML==''){
+                            alert ('No hay ninguna carrera con los filtros establecidos')
+                            resultados.innerHTML='No hay ninguna carrera con los datos que nos ha proporcionado, Prueba a buscar de nuevo :)'
+                        }
 
                         let numPag = document.getElementById("numPag")
 
                         numPag.innerHTML = `${currentPage} de ${pagsTotales}`
 }
-// function filtrar(data) {
-//     // Obtiene los valores de los inputs
-//     const categoriaInput = document.getElementById("categoriaInput").value;
-//     const nombreInput = document.getElementById("nombreInput").value;
-//     // Filtra los elementos según la categoría y el nombre ingresados atraves de un filter conbinado
-//     const resultadosFiltrados = [];
-//     data.forEach(elemento => {
-//         if ((categoriaInput === "" || elemento.categoria === categoriaInput) &&
-//             (nombreInput === "" || elemento.nombre.includes(nombreInput))) {
-//             resultadosFiltrados.push(elemento);
-//         }
-//     });
 
-//     // Resultado
-//     console.log(resultadosFiltrados);
-//     return resultadosFiltrados;
+function mapaCarreras(carreras){
+    map.eachLayer(function(layer){
+        if(layer instanceof L.Marker){
+            map.removeLayer(layer);
+        }
+    })
 
-// }
-
+    carreras.forEach(carrera=>{
+        let jsonCoors = JSON.parse(carrera.coors)
+        L.marker(jsonCoors[0]).addTo(map);
+        
+    })
+}
 //Paginacion
 let next = document.getElementById("next")
 next.addEventListener("click", () => {
