@@ -56,7 +56,7 @@ let arr = [
       provincias: ['Madrid']
     },
     {
-      comunidad: 'Región de Murcia',
+      comunidad: 'Murcia',
       provincias: ['Murcia']
     },
     {

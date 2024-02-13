@@ -23,11 +23,12 @@ function verCarreras() {
         
         const categoriaInput = document.getElementById("categoriaInput").value;
         const nombreInput = document.getElementById("nombreInput").value;
+        const comunidadInput = document.getElementById('comunidadInput').value
         // Filtra los elementos según la categoría y el nombre ingresados atraves de un filter conbinado
         let resultadosFiltrados = [];
         data.forEach(elemento => {
             if ((categoriaInput === "" || elemento.categoria === categoriaInput) &&
-                (nombreInput === "" || elemento.nombre.includes(nombreInput))) {
+                (nombreInput === "" || elemento.nombre.includes(nombreInput)) && (comunidadInput === "" || elemento.comunidad === comunidadInput)) {
                 resultadosFiltrados.push(elemento);
             }
         });

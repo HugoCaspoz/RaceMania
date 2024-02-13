@@ -50,32 +50,31 @@
         <option value="juvenil">Juvenil (13-17 años)</option>
         <option value="adulto">Adulto (18 años en adelante)</option>
     </select>
+
+    <label for="comunidadInput">Seleccione la comunidad:</label>
+    <select id="comunidadInput">
+        <option value="">-- Todas las comunidades --</option>
+        <option value="Andalucía">Andalucía</option>
+        <option value="Aragón">Aragón</option>
+        <option value="Asturias">Asturias</option>
+        <option value="Islas Baleares">Islas Baleares</option>
+        <option value="Canarias">Canarias</option>
+        <option value="Cantabria">Cantabria</option>
+        <option value="Castilla y León">Castilla y León</option>
+        <option value="Castilla-La Mancha">Castilla-La Mancha</option>
+        <option value="Cataluña">Cataluña</option>
+        <option value="Extremadura">Extremadura</option>
+        <option value="Galicia">Galicia</option>
+        <option value="Madrid">Madrid</option>
+        <option value="Murcia">Murcia</option>
+        <option value="Navarra">Navarra</option>
+        <option value="La Rioja">La Rioja</option>
+        <option value="País Vasco">País Vasco</option>
+        <option value="Comunidad Valenciana">Comunidad Valenciana</option>
+    </select>
+
     <input type="text" id="nombreInput" placeholder="Ingrese el nombre">
     <button id="filtrar" >Filtrar</button>
-
-    <form action="#" method="get">
-        <label for="barraBusqueda">Barra de Búsqueda:</label>
-        <input type="text" id="barraBusqueda" name="barraBusqueda"> 
-
-        <label for="genero">Género:</label>
-        
-
-        <label for="distancia">Distancia:</label>
-        <select id="distancia" name="distancia">
-            <option value="5">menos de 10 km</option>
-            <option value="10">menos de 10 km</option>
-            <option value="15">menos de 15 km</option>
-            <option value="20">menos de 20 km</option>
-            <option value="25">más de 25 km</option>
-        </select>
-
-        <label for="desnivel">Desnivel:</label>
-        <input type="text" id="desnivel" name="desnivel">
-
-        
-
-        <input type="submit" value="Buscar">
-    </form>
 
     <div id="resultados">
         <!-- Carreras se mostrarán aquí -->
