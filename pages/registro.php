@@ -81,17 +81,18 @@
         function toggleCamposOrganizador() {
             var camposTelefonoClub = document.getElementById('camposTelefonoClub');
             camposTelefonoClub.style.display = 'block';
-            let phone = document.getElementById('phone')
-            phone.onchange = function() {
-                let errorTel = document.getElementById('errorTel');
-                if (!/^\(?(\d{3})\)?[-]?(\d{3})[-]?(\d{4})$/.test(phone.value.trim())) {
-                    errorTel.innerHTML = '';
-                    validar = true
-                } else {
-                    errorTel.innerHTML = '<p style="color: red; background-color: white; border-radius: 5px;">El teléfono introducido no es válido</p>';
-                    validar = false
-                }
-            }
+
+            // let phone = document.getElementById('phone')
+            // phone.onblur = function() {
+            //     let errorTel = document.getElementById('errorTel');
+            //     if (!(/^\+(?:[0-9] ?){6,14}[0-9]$/.test(phone.value.trim()))) {
+            //         errorTel.innerHTML = '<p style="color: red; background-color: white; border-radius: 5px;">El teléfono introducido no es válido</p>';
+            //         validar = false
+            //     } else {
+            //         errorTel.innerHTML = '';
+            //         validar = true
+            //     }
+            // }
         }
     </script>
     <script src="../assets/js/session.js"></script>
